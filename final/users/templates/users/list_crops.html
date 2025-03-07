@@ -1,0 +1,30 @@
+{% extends "users/base.html" %}
+
+{% block content %}
+    <h2 style="text-align: center;">List Your Crops</h2>
+    <div style="
+        width: 350px;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background-color: white;
+        text-align: center;">
+        
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+
+            <button type="submit" style="
+                width: 100%;
+                padding: 10px;
+                background-color: green;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;">
+                Save Crop
+            </button>
+        </form>
+    </div>
+{% endblock %}

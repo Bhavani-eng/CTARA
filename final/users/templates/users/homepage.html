@@ -1,0 +1,47 @@
+{% extends "users/base.html" %}
+{% load static %}  
+
+{% block content %}
+<div class="container">
+    
+    <h2>Welcome to AgriSure!</h2>
+    <p>
+        <a href="{% url 'signup' %}">Sign Up</a>
+        <a href="{% url 'login' %}">Login</a>
+    </p>
+</div>
+
+<style>
+    .container {
+        width: 400px;
+        margin: 100px auto;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background-color: white;
+        text-align: center;
+    }
+    .logo {
+        width: 120px;
+        height: auto;
+        display: block;
+        margin: 0 auto 15px auto;
+    }
+    h2 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+    a {
+        text-decoration: none;
+        color: white;
+        background-color: green;
+        padding: 10px 15px;
+        border-radius: 5px;
+        margin: 5px;
+        display: inline-block;
+    }
+    a:hover {
+        background-color: darkgreen;
+    }
+</style>
+{% endblock %}

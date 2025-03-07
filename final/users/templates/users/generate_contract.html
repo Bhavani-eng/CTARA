@@ -1,0 +1,38 @@
+{% extends "users/base.html" %}
+
+{% block content %}
+<div class="form-container">
+    <h2>Generate Contract</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Generate PDF</button>
+    </form>
+</div>
+
+<style>
+    .form-container {
+        width: 400px;
+        margin: 100px auto;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background-color: white;
+        text-align: center;
+    }
+    h2 {
+        font-size: 22px;
+    }
+    button {
+        background-color: green;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: darkgreen;
+    }
+</style>
+{% endblock %}
